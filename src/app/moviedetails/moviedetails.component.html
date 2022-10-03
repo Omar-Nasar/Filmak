@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <img [src]="'https://image.tmdb.org/t/p/w500' + SingleMovie.poster_path" alt="project-image" class="rounded"
+                width="60%">
+        </div>
+        <div class="col-md-7">
+            <div class="info-box">
+                <p> <b>{{SingleMovie.title}}</b></p>
+                <p><b>Vote Average: </b>{{SingleMovie.vote_average | number: '1.0-1'}} From 10 :
+                    {{SingleMovie.vote_count}}</p>
+                <p><b>Over View:</b>
+                    <br>
+                    {{SingleMovie.overview}}
+                </p>
+                <p><b>Original Language: </b> {{SingleMovie.original_language}}</p>
+                <p><b>Release Date: </b> {{SingleMovie.release_date | date}}</p>
+                <p><b>Price: </b> {{SingleMovie.popularity | currency}}</p>
+                <!-- Add icon library -->
+
+                <!-- Auto width -->
+                <button class="btn"><i class="fa fa-download"></i> Watch And Download</button>
+            </div>
+        </div>
+    </div>
+</div>

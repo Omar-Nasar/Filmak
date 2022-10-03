@@ -1,0 +1,49 @@
+.info-box {
+    background-color: rgba(224, 142, 142, 0.151);
+    padding: 30px 40px;
+    border-radius: 5px;
+}
+
+.row {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.info-box p {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #00000029;
+}
+
+img {
+    margin-left: 5rem;
+}
+
+.rounded {
+    border-radius: 5px !important;
+}
+
+p {
+    font-family: "Barlow", sans-serif !important;
+    font-weight: 350;
+    font-size: 1rem;
+    letter-spacing: 0.03rem;
+    margin-bottom: 10px;
+}
+
+b {
+    font-weight: 750 !important;
+}
+
+.btn {
+    background-color: #420505e9;
+    border: none;
+    color: white;
+    padding: 12px 30px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.btn:hover {
+    background-color: #440606a4;
+}

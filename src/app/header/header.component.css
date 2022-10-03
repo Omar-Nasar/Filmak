@@ -1,0 +1,22 @@
+a {
+    font-size: 17px;
+    color: white;
+    margin-left: 2rem;
+}
+
+a:hover {
+    color: rgb(245, 109, 109);
+}
+
+.navbar-brand {
+    margin-left: 2rem;
+    padding: 5px;
+    color: white;
+    font-family: 'Franklin Gothic Medium';
+    font-size: 30px;
+}
+
+span {
+    color: red;
+
+}

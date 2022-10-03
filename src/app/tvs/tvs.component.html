@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row">
+      <div class="card col-3" style="width: 18rem; margin: 20px" *ngFor="let movie of TvShow">
+        <a [routerLink]="['/tv',movie.id]">
+          <img class="card-img" [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path" alt="Card image cap" />
+        </a>
+        <div class="card-body">
+          <h5 class="card-title"><b>{{ movie.name | uppercase }}</b></h5>
+          <p>Release Date: {{ movie.first_air_date | date }}</p>
+          <p>Ticket Price: {{ movie.popularity | currency }}</p>
+          <app-rating [rating]="movie.vote_average"></app-rating>
+          <br />
+          <a [routerLink]="['/movies',movie.id]">
+          <button class="btn"> Show Details
+          </button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>

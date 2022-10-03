@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <img [src]="'https://image.tmdb.org/t/p/w500' + SingleTv.poster_path" alt="project-image" class="rounded"
+                width="60%" height="auto">
+        </div>
+        <div class="col-md-7">
+            <div class="info-box">
+                <p> <b>{{SingleTv.name}}</b></p>
+                <p> <b>Status: </b>{{SingleTv.tagline}}</p>
+                <p> <b>Number Of Seasons: </b>{{SingleTv.number_of_seasons}}</p>
+                <p><b>Vote Average: </b>{{SingleTv.vote_average | number: '1.0-1'}} From 10 :
+                    {{SingleTv.vote_count}}</p>
+                <p><b>Over View:</b>
+                    <br>
+                    {{SingleTv.overview}}
+                </p>
+                <p><b>Original Language: </b> {{SingleTv.original_language}}</p>
+                <p><b>Release Date: </b> {{SingleTv.first_air_date | date}}</p>
+                <p><b>Price: </b> {{SingleTv.popularity | currency}}</p>
+                <a [href]="SingleTv.homepage" target="_blank">
+                    <button class="btn"><i class="fa fa-download"></i> Watch And Download</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

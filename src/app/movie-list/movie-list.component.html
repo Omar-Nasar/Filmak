@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="col text-center">
+    <input type="text" placeholder="Search For?" [(ngModel)]="ValueToSearch" />
+    <img class="search-icon" style="width: 5rem;"
+      src="http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png">
+  </div>
+  <div class="row">
+    <div class="card col-3" style="width: 18rem; margin: 20px" *ngFor="let movie of FilterMovies">
+      <a [routerLink]="['/movies',movie.id]">
+        <img class="card-img" [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path" alt="Card image cap" />
+      </a>
+      <div class="card-body">
+        <h5 class="card-title"><b>{{ movie.title | uppercase }}</b></h5>
+        <p>Release Date: {{ movie.release_date | date }}</p>
+        <p>Ticket Price: {{ movie.popularity | currency }}</p>
+        <app-rating [rating]="movie.vote_average"></app-rating>
+        <br />
+        <a [routerLink]="['/movies',movie.id]">
+        <button class="btn" (click)="SetVisib(movie.id)"> Show Details
+        </button>
+        </a>
+      </div>
+    </div>
+  </div>
+  <mat-paginator [length]="Lentgh" [pageSize]="PageSize" (page)="OnChangePage($event)"></mat-paginator>
+</div>
